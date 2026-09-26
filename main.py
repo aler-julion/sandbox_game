@@ -1,0 +1,42 @@
+from ursina import Ursina
+
+from core.game import Game
+from player.player import Player
+from world.floor import Floor
+from world.world import World
+from ui.debug_hud import DebugHUD
+
+# Inicializa o jogo
+app = Ursina()
+
+# Cria o jogador
+player = Player(
+    position=(10, 2, 10),
+    respawn_height=-30,
+)
+
+# Cria o mundo
+world = World(
+    player=player
+)
+
+# Cria o chao
+floor = Floor(
+    world=world,
+    width=20,
+    depth=20,
+)
+
+floor.generate()
+
+# Cria o HUD de debug
+debug_hud = DebugHUD(
+    player=player,
+    world=world,
+)
+
+# Eventos gerais do jogo
+game = Game()
+
+# Inicia o jogo
+app.run()
