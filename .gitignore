@@ -1,4 +1,4 @@
-# Ambiente virtual
+# Virtual environment
 .venv/
 venv/
 env/
@@ -9,20 +9,18 @@ __pycache__/
 *.pyo
 *.pyd
 
-# VS Code
+# IDE
 .vscode/
-
-# PyCharm
 .idea/
 
-# Sistema operacional
+# OS
 .DS_Store
 Thumbs.db
 
 # Logs
 *.log
 
-# Builds
+# Build
 build/
 dist/
 *.egg-info/
