@@ -1,3 +1,5 @@
+from blocks.block_registry import GRASS
+
 class Floor:
     """Gera o chao no mundo"""
 
@@ -20,10 +22,11 @@ class Floor:
             for x in range(self.width):
 
                 self.world.add_block(
-                    (
+                    position=(
                         x,
                         self.height,
                         z,
-                    )
+                    ),
+                    block_type=GRASS,
                 )
             
