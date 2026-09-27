@@ -17,7 +17,7 @@ class Voxel(Button):
             position=position,
             model="cube",
             origin_y=0.5,
-            texture="block_type.texture",
+            texture=block_type.texture,
             color=color.white,
             highlight_color=color.lime,
             collider="box",

@@ -4,19 +4,19 @@ from .block_type import BlockType
 GRASS = BlockType(
     id="grass",
     name="Grass",
-    texture="white_cube" # Por enquantos textures brancas, sem assets externos
+    texture="grass" # Por enquantos textures brancas, sem assets externos
 )
 
 DIRT = BlockType(
     id="dirt",
     name="Dirt",
-    texture="white_cube" # Por enquantos textures brancas, sem assets externos
+    texture="dirt" # Por enquantos textures brancas, sem assets externos
 )
 
 STONE = BlockType(
     id="stone",
     name="Stone",
-    texture="white_cube" # Por enquantos textures brancas, sem assets externos
+    texture="stone" # Por enquantos textures brancas, sem assets externos
 )
 
 BLOCKS = {
