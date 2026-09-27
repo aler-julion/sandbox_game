@@ -37,9 +37,10 @@ class DebugHUD(Entity):
         # Posição do bloco observado.
         if targeted_block:
             block_position = targeted_block.entity.grid_position
+            block_type = targeted_block.entity.block_type
 
             block_info = (
-                f"Bloco: "
+                f"Bloco: {block_type.name} | "
                 f"X: {block_position[0]} | "
                 f"Y: {block_position[1]} | "
                 f"Z: {block_position[2]}"

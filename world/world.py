@@ -1,5 +1,6 @@
 from ursina import Entity, camera, destroy, raycast
-
+from blocks.block_registry import DIRT
+from blocks.block_type import BlockType
 from .voxel import Voxel
 
 
@@ -15,7 +16,12 @@ class World(Entity):
         # Armazena os blocos existentes no mundo.
         self.blocks = {}
 
-    def add_block(self, position):
+    def add_block(
+
+        self,
+        position,
+        block_type: BlockType = DIRT,
+        ):
         """Adiciona um bloco na posição informada."""
 
         position = self.to_grid(position)
@@ -26,6 +32,7 @@ class World(Entity):
 
         voxel = Voxel(
             position=position,
+            block_type=block_type,
             parent=self,
         )
 
